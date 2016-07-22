@@ -1,0 +1,35 @@
+// [*] Document
+// [*] Size
+$size--font-base: 62.5% !default;
+$size--font-body: 1.6rem !default;
+
+// [*] Font
+$font--default: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
+$font--heading: "Montserrat", serif !default;
+$font--code: "Mononoki", consolas, monospace !default;
+
+// [*] Color
+$color--bg: #fff !default;
+$color--text: #445870 !default;
+
+$color--default: #ccc !default;
+$color--primary: #2c9fdd !default;
+$color--secondary: #4c596b !default;
+
+$color--success: #4ac291 !default;
+$color--info: #fff !default;
+$color--warning: #feb909 !default;
+$color--error: #e53935 !default;
+
+$color--palette-default: #fff !default;
+$color--palette-primary: "#2c9fdd", "#1e88e5" !default;
+$color--palette-success: "#4ac291", "#7cb342" !default;
+$color--palette-info: #fff !default;
+$color--palette-warning: #fff !default;
+$color--palette-danger: #fff !default;
+
+// [*] Responsive
+$screen--mobile: 48rem !default;
+$screen--tablet: 76.8rem !default;
+$screen--desktop: 99.2rem !default;
+$screen--widescreen: 120rem !default;

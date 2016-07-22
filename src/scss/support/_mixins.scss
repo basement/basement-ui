@@ -1,0 +1,37 @@
+@mixin tablet {
+  @media screen and (min-width: $screen--tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $screen--desktop) {
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media screen and (min-width: $screen--widescreen) {
+    @content;
+  }
+}
+
+@mixin mq($screen) {
+  @if $screen == tablet {
+    @include tablet {
+      @content;
+    }
+  }
+
+  @else if $screen == desktop {
+    @include desktop {
+      @content;
+    }
+  }
+
+  @else if $screen == widescreen {
+    @include widescreen {
+      @content;
+    }
+  }
+}

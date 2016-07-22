@@ -1,0 +1,37 @@
+{
+  "name": "basement-ui",
+  "version": "0.0.1",
+  "description": "css framework",
+  "main": "src/scss/basement.scss",
+  "devDependencies": {
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "bower": "^1.5.1",
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "node-sass": "^3.7.0"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basement/basement-ui.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "grid",
+    "flex",
+    "boilerplate",
+    "bootstrap",
+    "basement"
+  ],
+  "author": "Lokesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/basement/basement-ui/issues"
+  },
+  "homepage": "https://github.com/basement/basement-ui#readme"
+}
