@@ -1,0 +1,16 @@
+header {
+  .brand {
+    display: block;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  nav {
+    display: inline-block;
+    flex: 1;
+
+    a {
+      padding: 20px 10px;
+    }
+  }
+}

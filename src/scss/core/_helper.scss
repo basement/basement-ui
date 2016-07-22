@@ -1,1 +1,21 @@
-.clearfix:after { content: " "; display: block; clear: both; }
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.move-right {
+  float: right;
+}
+
+.flex {
+  display: flex;
+
+  .move-right {
+    text-align: right;
+  }
+}

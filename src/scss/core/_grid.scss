@@ -2,7 +2,6 @@ $sizes: ("lg", "widescreen") ("md", "desktop") ("sm", "tablet");
 
 .container {
   width: 100%;
-  display: flex;
   margin: 0 auto;
 
   @include tablet {
@@ -28,6 +27,13 @@ $sizes: ("lg", "widescreen") ("md", "desktop") ("sm", "tablet");
 @for $i from 1 through 12 {
   @each $size in $sizes {
     .col.#{nth($size, 1) + $i} {
+
+      @include mq(nth($size, 2)) {
+        flex: 1 1 (100% / 12 * $i);
+      }
+    }
+
+    .col.o-#{nth($size, 1) + $i} {
 
       @include mq(nth($size, 2)) {
         flex: 1 1 (100% / 12 * $i);
