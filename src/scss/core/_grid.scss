@@ -1,42 +1,59 @@
-$sizes: ("lg", "widescreen") ("md", "desktop") ("sm", "tablet");
+$sizes: ("xs", "mobile") ("sm", "tablet") ("md", "desktop") ("lg", "widescreen");
 
 .container {
   width: 100%;
   margin: 0 auto;
 
-  @include tablet {
-    width: 75rem;
-  }
 
+  @include tablet {
+    width: 75rem; 
+  }
 
   @include desktop {
     width: 97rem;
   }
 
-
   @include widescreen {
     width: 110rem;
+  }
+
+}
+
+.row{
+  display:flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  &.no-gutter>.col{
+    margin: 0px;
+  }
+  @include tablet {
+    flex-wrap: nowrap;
   }
 }
 
 .col {
   display: flex;
-  flex: 1;
+  flex: 0 100%; 
+  &:not(:first-child){
+    margin-left: 2px;
+    @include mobile {
+      margin-left: 0;
+    }  
+  }
 }
 
-@for $i from 1 through 12 {
-  @each $size in $sizes {
+@each $size in $sizes {
+  @for $i from 1 through 12 {
     .col.#{nth($size, 1) + $i} {
-
       @include mq(nth($size, 2)) {
-        flex: 1 1 (100% / 12 * $i);
+        flex-basis:(100% / 12 * $i);
       }
     }
-
-    .col.o-#{nth($size, 1) + $i} {
-
+  }
+  @for $i from 1 through 12 {
+    .col.move-#{nth($size, 1) + $i} {
       @include mq(nth($size, 2)) {
-        flex: 1 1 (100% / 12 * $i);
+        margin-left: (100% / 12 * $i);
       }
     }
   }

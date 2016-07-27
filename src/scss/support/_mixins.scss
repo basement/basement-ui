@@ -1,3 +1,9 @@
+@mixin mobile {
+  @media screen and (max-width: $screen--tablet - 1px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media screen and (min-width: $screen--tablet) {
     @content;
@@ -17,6 +23,11 @@
 }
 
 @mixin mq($screen) {
+  @if $screen == mobile {
+    @include mobile {
+      @content;
+    }
+  }
   @if $screen == tablet {
     @include tablet {
       @content;
