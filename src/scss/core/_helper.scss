@@ -12,6 +12,15 @@
   float: right;
 }
 
+.inline:not(ul){
+  display: inline-block;
+}
+ul.inline{
+  @include tablet {
+        display: inline-block; 
+    }
+}
+
 .flex {
   display: flex;
 

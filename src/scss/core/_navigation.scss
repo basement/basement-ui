@@ -1,0 +1,100 @@
+.navigation,
+.navigation > .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    background: $color--bg;
+    border-bottom: 1px solid darken($color--bg, 4%);
+    margin-bottom: 10px;
+    padding: 10px;
+
+    .to-left, .to-right, .to-center {
+        flex: 1 1 100%;
+
+        @include tablet {
+            flex-basis: 1%;
+        }
+
+
+        & > * {
+            @include tablet {
+              display: inline-block;
+            }
+        }
+    }
+
+    .to-center {
+        flex: 1 1 1%;
+
+        &:first-child {
+            margin-left: 100 / 3 * 1%;
+        }
+
+        &:last-child {
+            margin-right: 100 / 3 * 1%;
+        }
+
+        @include tablet {
+            text-align: center;
+        }
+    }
+
+    .to-left {
+        @include tablet {
+            text-align: left;
+        }
+    }
+
+    .to-right {
+        @include tablet {
+            text-align: right;
+        }
+    }
+
+    .is-brand {
+        font-weight: 500;
+        font-size: 2.1rem;
+    }
+}
+
+.nav {
+    ul {
+        li {
+          display: block; 
+          @include tablet {
+              display: inline-block;   
+          }
+            a {
+                padding: 10px;
+            }
+        }
+
+        li.has-menu {
+            position: relative;
+            ul {
+                display: none;
+                position: absolute;
+                min-width: 150px;
+                top: 100%;
+                background-color: $color--bg;  
+                border: 1px solid darken($color--bg, 10%);
+                li{
+                  display: block;
+                }
+            }
+
+            li a {
+                display: block;
+                padding: 10px;
+                text-align: left;
+            }
+            &:hover ul{
+              display: block;
+            }
+        }
+    }
+}

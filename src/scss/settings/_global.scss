@@ -10,9 +10,12 @@ $font--code: "Mononoki", consolas, monospace !default;
 
 // [*] Color
 $color--bg: #fff !default;
-$color--text: #445870 !default;
+$color--text: #2e3c40 !default;
 
-$color--default: #ccc !default;
+$color--link:#55a1fb; 
+$color--link-hover:darken(#55a1fb,20%); 
+
+$color--default: #ecf0f1 !default;
 $color--primary: #2c9fdd !default;
 $color--secondary: #4c596b !default;
 

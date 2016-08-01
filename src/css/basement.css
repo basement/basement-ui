@@ -217,6 +217,16 @@ input[type=button] {
   float: right;
 }
 
+.inline:not(ul) {
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  ul.inline {
+    display: inline-block;
+  }
+}
+
 .flex {
   display: flex;
 }
@@ -233,7 +243,16 @@ body {
   font-size: 1.4rem;
   background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  color: #445870;
+  color: #2e3c40;
+}
+
+a {
+  text-decoration: none;
+  color: #55a1fb;
+}
+
+a:hover, a:link, a:active {
+  color: #056ce5;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -264,19 +283,115 @@ h6, .h6 {
   font-size: 1rem;
 }
 
-header .brand {
+ul li a {
   display: block;
-  font-weight: 700;
-  font-size: 1.8rem;
 }
 
-header nav {
-  display: inline-block;
-  flex: 1;
+.navigation,
+.navigation > .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-header nav a {
-  padding: 20px 10px;
+.navigation {
+  background: #fff;
+  border-bottom: 1px solid whitesmoke;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.navigation .to-left, .navigation .to-right, .navigation .to-center {
+  flex: 1 1 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation .to-left, .navigation .to-right, .navigation .to-center {
+    flex-basis: 1%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation .to-left > *, .navigation .to-right > *, .navigation .to-center > * {
+    display: inline-block;
+  }
+}
+
+.navigation .to-center {
+  flex: 1 1 1%;
+}
+
+.navigation .to-center:first-child {
+  margin-left: 33.33333%;
+}
+
+.navigation .to-center:last-child {
+  margin-right: 33.33333%;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation .to-center {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation .to-left {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation .to-right {
+    text-align: right;
+  }
+}
+
+.navigation .is-brand {
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+
+.nav ul li {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .nav ul li {
+    display: inline-block;
+  }
+}
+
+.nav ul li a {
+  padding: 10px;
+}
+
+.nav ul li.has-menu {
+  position: relative;
+}
+
+.nav ul li.has-menu ul {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  top: 100%;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+}
+
+.nav ul li.has-menu ul li {
+  display: block;
+}
+
+.nav ul li.has-menu li a {
+  display: block;
+  padding: 10px;
+  text-align: left;
+}
+
+.nav ul li.has-menu:hover ul {
+  display: block;
 }
 
 .container {
